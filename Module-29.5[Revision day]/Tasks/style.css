@@ -1,0 +1,56 @@
+
+body{
+    background-color: aquamarine;
+}
+
+.btn{
+   font-size: 30px;
+   font-weight: bold;
+   margin: 20px;
+   padding: 0 10px;
+   border: none;
+   background: transparent;
+   cursor: pointer;
+}
+.btn:hover{
+    border: 2px solid skyblue;
+}
+.container{
+    width: 70%;
+    margin: 20px auto;
+}
+
+.img img{
+    width: 150px;
+}
+.card {
+  background-color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 10px;
+  border-radius: 10px;
+   
+}
+.img2 img{
+   width: 70px;
+   margin-left: 35px;
+   
+}
+.card h2{
+   font-family:  monospace;
+}
+input{
+    width: 50px;
+    border: none;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: 500;
+    background-color: rgb(233, 226, 226);
+    border-radius: 10px;
+}
+.shop-info h3{
+    display: inline;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+}

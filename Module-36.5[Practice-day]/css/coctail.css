@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Moon+Dance&family=Poppins:wght@500&family=Roboto:wght@400;500&display=swap');
+
+.body{
+    background-color: antiquewhite;
+    font-family: 'Moon Dance', cursive;
+}
+
+.coctail-container{
+    background-color: cadetblue;
+    border-radius: 15px;
+    
+}
+.coctail-container > div{
+    text-align: center;
+    padding: 15px 0;
+    color: white;
+    
+}
+.coctail-container > div > img{
+    border-radius: 20px;
+}
+
+#modal{
+   text-align: center;
+   
+}
+#spinner{
+    display: flex;
+    background-color: aqua;
+    margin: 0 auto;
+    display: none;
+}

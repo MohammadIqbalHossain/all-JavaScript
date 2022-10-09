@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello js</title>
+</head>
+
+<body>
+    <h1>Welcome to the blog site.</h1>
+    <header>
+   <ul id="blog-list">
+       <li>blog-1</li>
+       <li>blog-2</li>
+       <li>blog-3</li>
+       <li>blog-4</li>
+   </ul>
+
+    </header>
+
+    <section id="blog-element">
+    <article class="blog">
+        <h3 id="first-title">My Awesome blog-1</h3>
+       <p>  Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti eos aliquid dolore dolor voluptas? Repellat
+        cumque repellendus quaerat obcaecati labore voluptatum ipsam quia voluptates rerum soluta vitae, eius voluptate
+        accusamus laborum nam autem, atque hic quod illum quisquam, veritatis sapiente maxime. Sunt veniam numquam
+        tenetur quia distinctio eveniet fugit ullam!</p>
+    </article>
+    <article class="blog">
+        <h3 id="second-title">My Awesome blog-2</h3>
+        <p>Cupiditate iusto id porro necessitatibus et. Cum quaerat labore quam voluptates eos tempora, cumque aspernatur
+        autem asperiores officiis error obcaecati sit modi, laudantium ea alias eaque. Accusantium doloribus quasi ipsum
+        quas! Quae quas dolor suscipit ab nisi non voluptates natus id numquam, autem neque atque repellendus magnam
+        nulla tenetur voluptatem.</p>
+    </article>
+    <article class="blog">
+        <h3 id="third-title">My Awesome blog-3</h3>
+        <p>Beatae doloremque molestiae expedita illum nostrum fugit laboriosam, similique, possimus ex magnam eos dolor
+        voluptatem harum et perspiciatis cum maxime cupiditate! Veniam quam obcaecati doloremque amet eligendi ad
+        nesciunt dolor, ea quo doloribus explicabo voluptate enim aliquam ab vero beatae dicta illo molestiae. Odit in
+        quas sit quidem vel laboriosam.</p>
+    </article>
+    <article class="blog">
+        <h3 id="fourth-title">My Awesome blog-4</h3>
+       <p> Beatae doloremque molestiae expedita illum nostrum fugit laboriosam,    similique, possimus ex magnam eos dolor
+        voluptatem harum et perspiciatis cum maxime cupiditate! Veniam quam obcaecati doloremque amet eligendi ad
+        nesciunt dolor, ea quo doloribus explicabo voluptate enim aliquam ab vero beatae dicta illo molestiae. Odit in
+        quas sit quidem vel laboriosam.</p>
+</article>
+    <article class="blog">
+        <h3 id="fifth-title">My Awesome blog-5</h3>
+        <p> Beatae doloremque molestiae expedita illum nostrum fugit laboriosam, similique, possimus ex magnam eos dolor
+        voluptatem harum et perspiciatis cum maxime cupiditate! Veniam quam obcaecati doloremque amet eligendi ad
+        nesciunt dolor, ea quo doloribus explicabo voluptate enim aliquam ab vero beatae dicta illo molestiae. Odit in
+        quas sit quidem vel laboriosam.</p>
+    </article>
+</section>
+    <script src="./js/script.js"></script>
+    <script>
+        // console.log(document)
+        const blogTitle = document.getElementsByTagName('h3');
+        for(const h3 of blogTitle){
+            // h3.innerHTML = "my awesome blog"
+            console.log(h3.innerHTML);
+        }
+       const pElemenet = document.getElementsByTagName('p');
+       for(const p of pElemenet){
+           console.log(p);
+       }
+
+       //capture and change element by using the getRElemetById.
+       const titleStyle = document.getElementById('first-title').style.color = 'green';
+       const secondTitleStyle = document.getElementById('second-title');
+       secondTitleStyle.style.fontSize = '30px';
+       secondTitleStyle.style.background = 'gray'
+       secondTitleStyle.style.textAlign = 'center';
+       secondTitleStyle.style.padding = '20px';
+
+     
+     // geting all elements or and special element by querySelectorAll or QuerySelector!
+
+     const getByQuery = document.querySelector('.blog p').style.fontSize = '24px';
+     const getAllH3 = document.querySelectorAll('.blog h3');
+     for(const h3 of getAllH3){
+        //  console.log(h3)
+        h3.style.textAlign = 'center';
+        h3.style.fontSize = '30px';
+        h3.style.background = 'gray';
+        h3.style.padding = '10px';
+     }
+    //  console.log(getAllH3);
+
+    //Seting and geing attribute and parent node child node!
+
+     const getHTmlList = document.getElementById('fifth-title').parentElement.parentElement.parentElement;
+     console.log(getHTmlList);
+
+     const getChildItem = document.getElementById('fifth-title').childNodes;
+     console.log(getChildItem);
+
+     const sectingAttribute = document.getElementById('fifth-title').getAttribute('id')
+     console.log(sectingAttribute);
+
+    //  const setingAttribute = document.getElementByid('fifth-title').setAttribute('title', 'added new attribue');
+     
+     
+     //Crearing a html tag and appending it in to the parent node!
+     const li = document.createElement('li');
+     li.innerText = 'blog-5';
+     const ul = document.getElementById('blog-list');
+     ul.appendChild(li);
+
+     //creatinng a whole article!
+
+     const article = document.createElement('article');
+     article.classList.add('blog');
+     const h3 = document.createElement('h3');
+     h3.innerText = "My awesome blog-6";
+     document.createElement('p');
+     const p = document.createElement('p')
+     p.innerText = "Beatae doloremque molestiae expedita illum nostrum fugit laboriosam, similique, possimus ex magnam eos dolor";
+     article.appendChild(h3);
+     article.appendChild(p);
+
+     const blogSection = document.getElementById('blog-element');
+     blogSection.appendChild(article);
+
+
+       //Geting elements by getElementByClassName()
+       const blogStyling = document.getElementsByClassName('blog');
+      for(const blog of blogStyling){
+          blog.style.border = '3px solid green';
+          blog.style.borderRadius = '10px';
+          blog.style.margin = '10px';
+          blog.style.padding = '5px';
+      }
+
+      //removng a children.
+
+      const blogList = document.getElementById('blog-list');
+      const blogsItem = blogList.children[4];
+      blogList.removeChild(blogsItem);
+      console.log(blogsItem);
+    //   console.log(blogList);
+     
+     
+    </script>
+</body>
+
+</html>

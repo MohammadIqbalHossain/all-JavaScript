@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event bubble</title>
+</head>
+<body>
+    <h1>Event Bubble</h1>
+    <section id="bubble-section">
+    <ul id="container">
+        <li class="item">Lorem, ipsum dolor.</li>
+        <li id="second-item" class="item">Illum, architecto molestiae.</li>
+        <li class="item">Sit, deserunt. Autem.</li>
+        <li class="item">Sit, deserunt. Autem.</li>
+    </ul>
+
+    <p class='nav'>I am Hero Alam 1</p>
+    <p class='nav'>I am Hero Alam 2</p>
+
+
+</section>
+</body>
+<script>
+
+var p = document.getElementsByClassName('nav')[0];
+p.classList.remove('nav');
+p.className = "";
+
+    document.getElementById('second-item').addEventListener('click', function(event){
+             console.log('second item is clicked');
+             event.stopPropagation();
+    })
+    //ul
+    document.getElementById('container').addEventListener('click', function(){
+             console.log('ul is clicked');
+             event.stopImmediatePropagation();
+    })
+    //section
+    document.getElementById('bubble-section').addEventListener('click', function(){
+             console.log('section is clicked');
+    })
+</script>
+</html>

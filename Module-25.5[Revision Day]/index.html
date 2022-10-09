@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubble and delegation</title>
+</head>
+<body>
+    
+    <!-- event bubble -->
+    <section id="container">
+        <h1>This about <i>event bubble</i></h1>
+        <ul id="items">
+            <li class="item">Lorem, ipsum dolor.</li>
+            <li id="second-item" class="item">Lorem, ipsum dolor.</li>
+            <li class="item">Lorem, ipsum dolor.</li>
+            <li class="item">Lorem, ipsum dolor.</li>
+        </ul>
+
+        
+    </section>
+
+    <!-- Event delegation -->
+     
+    <section>
+         <h1>Event delegation</h1>
+         <ul id="list-container">
+             <li class="item-2">Lorem, ipsum dolor.</li>
+             <li class="item-2">Aliquid, sit adipisci.</li>
+             <li class="item-2">Similique, veritatis labore.</li>
+             <li class="item-2">Minus, id iure?</li>
+             <li class="item-2">Officia, neque repellat.</li>
+         </ul>
+         
+         <button id="add-btn">Add new</button>
+    </section>
+
+
+    <!-- JS script  -->
+    <script src="./Bubble.js"></script>
+</body>
+</html>

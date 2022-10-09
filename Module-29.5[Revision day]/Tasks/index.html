@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shopping card</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="card">
+            <div class="img">
+                <img src="./images/frutika.jpg" alt="">
+                <h2>this is a fruitila img</h2>
+            </div>
+            <div class="shop-info">
+                 <button id="minus-btn" class="minus-btn btn">-</button>
+                 <input id="juice1-input" type="number" value="0">
+                 <button id="plus-btn" class="plus-btn btn">+</button>
+                 <h3 id="juice1-total-price">$865</h3>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="img2">
+                <img src="./images/frutika2.jfif" alt="">
+                <h2>this is a fruitila img</h2>
+            </div>
+            <div class="shop-info">
+                 <button id="paper-minus-btn" class="minus-btn btn">-</button>
+                 <input id="paper-input" type="number" value="0">
+                 <button id="paper-juice" class="plus-btn btn">+</button>
+                 <h3 id="paper-total-price">$865</h3>
+            </div>
+        </div>
+        <div class="card">
+           <div>
+              <h2>Subtotal: </h2>
+              <h2>Tax: </h2>
+              <h2>Total: </h2>
+           </div>
+           <div>
+            <h2 id="subtotal">$2.49</h2>
+            <h2 id="total-tax">$1.48</h2>
+            <h2 id="grand-total"> $3.50</h2>
+          </div>
+        </div>
+        
+    </div>
+    
+
+    <!-- JS  -->
+    <script src="./app.js"></script>
+</body>
+</html>

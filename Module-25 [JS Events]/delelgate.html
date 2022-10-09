@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delilgate</title>
+</head>
+<body>
+    
+    <h1>This is about the event  Delilgate</h1>
+     
+    <ul id="container">
+        <li class="item">Lorem, ipsum dolor.</li>
+        <li class="item">Excepturi, officiis odio.</li>
+        <li class="item">Voluptatum, quam commodi.</li>
+        <li class="item">Aperiam, repellendus tempora!</li>
+        <li class="item">Omnis, aspernatur ipsum.</li>
+    </ul>
+    <button id="add-btn">Add Child</button>
+
+
+    <script>
+      const items = document.getElementsByClassName('item')
+        for(const item of items){
+            item.addEventListener('click', function(event){
+            //    document.getElementById('container');
+            //    container.removeChild(item)
+            // event.target.parentNode.removeChild(event.target);
+              
+            })
+        }
+
+
+        //add child
+        const addBtn = document.getElementById('add-btn');
+        addBtn.addEventListener('click', function(){
+            const li = document.createElement('li');
+            li.innerText = 'this is a new home';
+            const parent = document.getElementById('container');
+            parent.appendChild(li);
+            
+        })
+
+
+        //remove all item.
+
+        document.getElementById('container').addEventListener('click', function(event){
+             event.target.parentNode.removeChild(event.target);
+        })
+
+        
+
+            
+
+    </script>
+    
+</body>
+</html>
